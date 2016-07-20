@@ -11,6 +11,7 @@ var pingPong = function(input) {
         pingPongArray.push(i);
       }
   };
+  return pingPongArray;
 };
 
 
@@ -27,7 +28,7 @@ $(document).ready(function() {
     var pingPongAnswer = pingPong(input);
 
     pingPongAnswer.forEach(function(pingPongAnswer) {
-      $("ul#loop").prepend("<li>" + pingPongAnswer + "</li>");
+      $("ul#loop").append("<li>" + pingPongAnswer + "</li>");
     });
   });
 });
