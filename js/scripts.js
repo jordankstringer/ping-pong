@@ -12,3 +12,22 @@ var pingPong = function(input) {
       }
   };
 };
+
+
+
+
+
+$(document).ready(function() {
+  $("form#ping-pong").submit(function(event) {
+    event.preventDefault();
+
+  $("ul#loop").empty();
+
+    var input = parseInt($("input#numberInput").val());
+    var pingPongAnswer = pingPong(input);
+
+    pingPongAnswer.forEach(function(pingPongAnswer) {
+      $("ul#loop").prepend("<li>" + pingPongAnswer + "</li>");
+    });
+  });
+});
